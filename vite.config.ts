@@ -6,6 +6,7 @@ import vue from '@vitejs/plugin-vue'
 export default defineConfig({
   plugins: [vue()],
   base: '/project_wiki/',
+  assetsInclude: ['**/*.md', '**/*.ino'],
   resolve: {
     alias: {
       '@docs': path.resolve(__dirname, '../project-documentation-submissions'),

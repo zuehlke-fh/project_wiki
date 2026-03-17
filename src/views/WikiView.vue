@@ -110,19 +110,25 @@ function normalizeImageLinks(source: string): string {
     : `${import.meta.env.BASE_URL}/`
   const base = `${baseUrl}projects/${props.projectId}/images/`
 
-  // ../images/filename -> /projects/<id>/images/filename
+  // 1) Already-absolute /projects/... paths -> prefix with BASE_URL
   let result = source.replace(
+    /!\[([^\]]*)]\(\/projects\/([^)]+)\)/g,
+    (_match, alt, rest) => `![${alt}](${baseUrl}projects/${rest})`,
+  )
+
+  // 2) ../images/filename -> <base>/images/filename
+  result = result.replace(
     /!\[([^\]]*)]\(\.\.\/images\/([^)]+)\)/g,
     (_match, alt, file) => `![${alt}](${base}${file})`,
   )
 
-  // ../Images/filename (capital I) -> /projects/<id>/images/filename
+  // 3) ../Images/filename (capital I) -> <base>/images/filename
   result = result.replace(
     /!\[([^\]]*)]\(\.\.\/Images\/([^)]+)\)/g,
     (_match, alt, file) => `![${alt}](${base}${file})`,
   )
 
-  // images/filename from project root README -> /projects/<id>/images/filename
+  // 4) images/filename from project root README -> <base>/images/filename
   result = result.replace(
     /!\[([^\]]*)]\(images\/([^)]+)\)/g,
     (_match, alt, file) => `![${alt}](${base}${file})`,

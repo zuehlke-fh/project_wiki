@@ -1,0 +1,14 @@
+{
+  "description": {
+    "short": "A remote-controlled car prototype that deliberately restricts user control when driven too aggressively, exploring autonomy, resistance, and shared agency between human and machine."
+  },
+  "stats": {
+    "microcontroller": "Microcontroller with wireless link (as used in prototype)",
+    "keywords": [
+      "Autonomy",
+      "Non-compliant interface",
+      "Prototype",
+      "Interaction design"
+    ]
+  }
+}

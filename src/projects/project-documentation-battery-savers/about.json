@@ -1,0 +1,13 @@
+{
+  "description": {
+    "short": "A physical prototype that automatically disconnects wireless charging after a user-defined time to help extend phone battery life."
+  },
+  "stats": {
+    "microcontroller": "ESP32",
+    "keywords": [
+      "Battery",
+      "Energy saving",
+      "Prototype"
+    ]
+  }
+}

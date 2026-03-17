@@ -1,0 +1,18 @@
+{
+  "description": {
+    "short": "Das Projekt untersucht das Thema Symbiose anhand einer Beziehung zwischen zwei Robotern, die aufeinander angewiesen sind, um zu „existieren“. Dabei wurde eine freundschaftliche Form des Zusammenlebens interpretiert, in der technologische Wesen mit unterschiedlichen Bedürfnissen lernen, sich gegenseitig zu unterstützen. Das Zusammenspiel von Nähe, Abhängigkeit und gegenseitiger Fürsorge steht dabei im Mittelpunkt."
+  },
+  "stats": {
+    "weight": "0.5 kg",
+    "cost": "---",
+    "found-component": "---",
+    "microcontroller": "Esp 32",
+    "keywords": [
+      "DIY",
+      "Improvisation",
+      "Engineering",
+      "Experimentation",
+      "Futility"
+    ]
+  }
+}

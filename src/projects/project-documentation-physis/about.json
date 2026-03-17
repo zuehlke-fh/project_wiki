@@ -1,0 +1,14 @@
+{
+  "description": {
+    "short": "A cooperative Christmas-themed puzzle game where Santa and Rudolf work together via physical controllers and a web-based grid to repair a magical tree and save Christmas."
+  },
+  "stats": {
+    "microcontroller": "ESP32 (multiple)",
+    "keywords": [
+      "Cooperative play",
+      "Physical computing",
+      "Web UI",
+      "Symbiotic machine"
+    ]
+  }
+}

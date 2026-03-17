@@ -1,0 +1,18 @@
+{
+  "description": {
+    "short": "Tom&Jerry is a Diorama. Two actors, a mouse and a cat, move along the same straight path and interact via distance sensors. The mouse approaches the cat, but whenever the cat turns toward it, the mouse flees. The mouse always escapes."
+  },
+  "stats": {
+    "weight": "N.A.",
+    "cost": "~20 EUR",
+    "found-component": "Wood from Maker-Space",
+    "microcontroller": "Arduino Uno",
+    "keywords": [
+      "Improvisation",
+      "DIY",
+      "Humor",
+      "Futility",
+      "Mechanism"
+    ]
+  }
+}

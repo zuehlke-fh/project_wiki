@@ -1,0 +1,17 @@
+{
+    "description": {
+      "short": "Our shazam-based karaoke machine is a small device that recognizes songs, displays its lyrics and plays the corresponding song."
+    },
+    "stats": {
+      "weight": "0.5 kg",
+      "cost": "0 EUR",
+      "microcontroller": "Lilygo ESP32-S3R8, Raspberry Pi",
+      "keywords": [
+        "DIY",
+        "Experimentation",
+        "Whimsy",
+        "Playfulness",
+        "Interaction"
+       ]
+    }
+  }

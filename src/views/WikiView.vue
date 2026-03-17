@@ -102,6 +102,31 @@ const project = computed(() =>
   projects.find(p => p.id === props.projectId),
 )
 
+function normalizeImageLinks(source: string): string {
+  // Rewrite relative images like ../images/foo.png to absolute /projects/<projectId>/images/foo.png
+  const base = `/projects/${props.projectId}/images/`
+
+  // ../images/filename -> /projects/<id>/images/filename
+  let result = source.replace(
+    /!\[([^\]]*)]\(\.\.\/images\/([^)]+)\)/g,
+    (_match, alt, file) => `![${alt}](${base}${file})`,
+  )
+
+  // ../Images/filename (capital I) -> /projects/<id>/images/filename
+  result = result.replace(
+    /!\[([^\]]*)]\(\.\.\/Images\/([^)]+)\)/g,
+    (_match, alt, file) => `![${alt}](${base}${file})`,
+  )
+
+  // images/filename from project root README -> /projects/<id>/images/filename
+  result = result.replace(
+    /!\[([^\]]*)]\(images\/([^)]+)\)/g,
+    (_match, alt, file) => `![${alt}](${base}${file})`,
+  )
+
+  return result
+}
+
 const effectivePagePath = computed(() => {
   if (props.pagePath && props.pagePath.length > 0) return props.pagePath
   // default: main wiki page
@@ -183,7 +208,8 @@ const rendered = computed(() => {
     return md.render(`# Not found\n\nNo markdown page for \`${effectivePagePath.value}\`.`)
   }
 
-  return md.render(source)
+  const normalized = normalizeImageLinks(source)
+  return md.render(normalized)
 })
 
 function goHome() {

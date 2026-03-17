@@ -103,8 +103,12 @@ const project = computed(() =>
 )
 
 function normalizeImageLinks(source: string): string {
-  // Rewrite relative images like ../images/foo.png to absolute /projects/<projectId>/images/foo.png
-  const base = `/projects/${props.projectId}/images/`
+  // Rewrite relative images like ../images/foo.png to absolute
+  // <BASE_URL>/projects/<projectId>/images/foo.png
+  const baseUrl = import.meta.env.BASE_URL.endsWith('/')
+    ? import.meta.env.BASE_URL
+    : `${import.meta.env.BASE_URL}/`
+  const base = `${baseUrl}projects/${props.projectId}/images/`
 
   // ../images/filename -> /projects/<id>/images/filename
   let result = source.replace(

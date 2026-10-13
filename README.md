@@ -1,5 +1,29 @@
-# Vue 3 + TypeScript + Vite
+# Project Wiki
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Wiki of previous student projects, built with Vue 3 + TypeScript + Vite and deployed to GitHub Pages on every push to `main`.
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+## Develop
+
+```bash
+npm ci
+npm run dev      # local dev server
+npm run build    # type-check + production build into dist/
+```
+
+## Adding a project
+
+Create `src/projects/project-documentation-<name>/` containing:
+
+```
+about.json        # description.short and stats (weight, cost, microcontroller, keywords)
+images/           # all images; reference them from markdown as ../images/<file>
+readme/           # README.md, construction.md, learnings.md, result.md, timeline.md
+```
+
+Projects are discovered automatically. `public/projects/<name>/images` is a symlink to
+`src/projects/<name>/images` so the images exist in one place only; create the same
+symlink for a new project:
+
+```bash
+ln -s ../../../src/projects/<name>/images public/projects/<name>/images
+```

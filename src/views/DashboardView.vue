@@ -56,18 +56,21 @@
           </div>
         </div>
       </button>
-      <div
-        v-for="(name, index) in fillerNames"
-        :key="`filler-${index}`"
+      <button
+        v-for="filler in fillerProjects"
+        :key="filler.id"
         class="tile tile-empty"
-        aria-hidden="true"
+        type="button"
+        @click="openProject(filler)"
       >
         <div class="tile-image">
           <div class="tile-overlay">
-            <h2 class="tile-title">{{ name }}</h2>
+            <h2 class="tile-title">
+              {{ filler.title }}
+            </h2>
           </div>
         </div>
-      </div>
+      </button>
     </div>
 
     <ProjectModal
@@ -174,7 +177,22 @@ const fillerPool = (() => {
   return prefixes.map((prefix, i) => `${prefix} ${suffixes[i]}`)
 })()
 
-const fillerNames = computed(() => fillerPool.slice(0, layout.value.empty))
+const fillerProjects = computed<Project[]>(() =>
+  fillerPool.slice(0, layout.value.empty).map(title => ({
+    id: `placeholder-${title.toLowerCase().replace(/\s+/g, '-')}`,
+    title,
+    rootPath: '',
+    placeholder: true,
+    about: {
+      description: {
+        short:
+          `"${title}" is not a real project. This name was randomly generated to fill an empty ` +
+          'spot on the dashboard and changes every time the page is loaded. The next project ' +
+          'featured here could be yours!',
+      },
+    },
+  })),
+)
 
 function onDocumentClick(event: MouseEvent) {
   if (filterEl.value && !filterEl.value.contains(event.target as Node)) {
@@ -268,9 +286,6 @@ function goToWiki(project: Project) {
 }
 
 .tile-empty {
-  cursor: default;
-  pointer-events: none;
-  user-select: none;
   background: #000;
 }
 

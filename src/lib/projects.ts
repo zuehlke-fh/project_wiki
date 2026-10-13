@@ -25,6 +25,8 @@ export interface Project {
   year?: string
   about?: ProjectAbout
   heroImage?: string
+  /** Generated stand-in for an empty dashboard slot; has no wiki. */
+  placeholder?: boolean
 }
 
 // Load all about.json files eagerly so we can build a project list at startup

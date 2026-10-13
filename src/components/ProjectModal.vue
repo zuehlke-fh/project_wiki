@@ -42,7 +42,12 @@
         <button type="button" class="secondary" @click="$emit('close')">
           Close
         </button>
-        <button type="button" class="primary" @click="$emit('open-wiki', project)">
+        <button
+          v-if="!project.placeholder"
+          type="button"
+          class="primary"
+          @click="$emit('open-wiki', project)"
+        >
           Open wiki
         </button>
       </footer>

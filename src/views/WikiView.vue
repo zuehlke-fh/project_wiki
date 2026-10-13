@@ -134,6 +134,12 @@ function normalizeImageLinks(source: string): string {
     (_match, alt, file) => `![${alt}](${base}${file})`,
   )
 
+  // 5) Raw HTML media (<video>, <source>, <img>) with absolute /projects/... src
+  result = result.replace(
+    /(src=")\/projects\//g,
+    (_match, prefix) => `${prefix}${baseUrl}projects/`,
+  )
+
   return result
 }
 

@@ -1,0 +1,20 @@
+{
+  "title": "Tom Peter",
+  "description": {
+    "short": "A MIDI controller with greater expression than traditional key-based ones, inspired by the shape of a trumpet."
+  },
+  "stats": {
+    "weight": "---",
+    "cost": "---",
+    "found-component": "---",
+    "microcontroller": "Teensy 4.0",
+    "keywords": [
+      "Found Treasures",
+      "Human-power",
+      "Interaction",
+      "Impracticality",
+      "Challenge",
+      "Experimental"
+    ]
+  }
+}

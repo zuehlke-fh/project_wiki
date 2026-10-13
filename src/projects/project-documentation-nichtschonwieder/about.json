@@ -1,0 +1,19 @@
+{
+  "title": "Scan & Save",
+  "description": {
+    "short": "Scan & Save is a barcode scanner that identifies sustainable products in the supermarket and shows the available discount on a display, rewarding eco-friendly shopping."
+  },
+  "stats": {
+    "weight": "---",
+    "cost": "---",
+    "found-component": "---",
+    "microcontroller": "Arduino UNO (compatible)",
+    "keywords": [
+      "Sustainability",
+      "Eco-friendly",
+      "Interaction",
+      "Functionality",
+      "Innovation"
+    ]
+  }
+}

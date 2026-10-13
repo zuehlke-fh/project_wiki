@@ -1,0 +1,20 @@
+{
+  "title": "LockQuest",
+  "description": {
+    "short": "LockQuest is a physical game, which utilizes a gyro sensor and grip tools to open a box."
+  },
+  "stats": {
+    "weight": "~1 kg",
+    "cost": "~40 EUR",
+    "found-component": "---",
+    "microcontroller": "ESP32",
+    "keywords": [
+      "Found Treasures",
+      "Craftsmanship",
+      "Creativity",
+      "Interaction",
+      "Mechanism",
+      "Challenge"
+    ]
+  }
+}

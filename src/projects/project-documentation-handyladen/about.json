@@ -1,0 +1,19 @@
+{
+  "title": "Handyladen",
+  "description": {
+    "short": "A bike-powered charger that either charges a phone or runs a bike light (steady or blinking) from the energy generated while riding, built entirely from salvaged components."
+  },
+  "stats": {
+    "weight": "---",
+    "cost": "---",
+    "found-component": "Salvaged bike dynamo and components from friends and family",
+    "microcontroller": "---",
+    "keywords": [
+      "Upcycling",
+      "Human-power",
+      "Sustainability",
+      "Engineering",
+      "Eco-friendly"
+    ]
+  }
+}

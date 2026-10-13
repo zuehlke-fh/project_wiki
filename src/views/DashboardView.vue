@@ -35,17 +35,7 @@ import ProjectModal from '../components/ProjectModal.vue'
 
 const router = useRouter()
 
-const visibleProjects = computed<Project[]>(() => {
-  const arr = [...projects]
-  if (arr.length >= 6) {
-    return arr.slice(0, 6)
-  }
-  const tiles: Project[] = []
-  while (tiles.length < 6) {
-    tiles.push(...arr)
-  }
-  return tiles.slice(0, 6)
-})
+const visibleProjects = computed<Project[]>(() => [...projects])
 
 const selected = ref<Project | null>(null)
 
@@ -80,7 +70,7 @@ function goToWiki(project: Project) {
 
 <style scoped>
 .dashboard-root {
-  height: 100vh;
+  min-height: 100vh;
   background: #f9f5ff;
   display: flex;
   align-items: stretch;
@@ -92,10 +82,9 @@ function goToWiki(project: Project) {
 .tile-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  grid-template-rows: repeat(2, minmax(0, 1fr));
+  grid-auto-rows: calc(50vh - 0.75rem - 0.375rem);
   gap: 0.75rem;
   width: 100%;
-  height: 100%;
 }
 
 .tile {
@@ -148,7 +137,7 @@ function goToWiki(project: Project) {
 @media (max-width: 960px) {
   .tile-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-template-rows: repeat(3, minmax(0, 160px));
+    grid-auto-rows: 160px;
     aspect-ratio: auto;
   }
 
@@ -164,7 +153,7 @@ function goToWiki(project: Project) {
 @media (max-width: 640px) {
   .tile-grid {
     grid-template-columns: repeat(1, minmax(0, 1fr));
-    grid-template-rows: repeat(6, minmax(0, 140px));
+    grid-auto-rows: 140px;
   }
 }
 </style>

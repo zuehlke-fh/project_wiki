@@ -1,0 +1,19 @@
+{
+  "title": "Smart Trichter",
+  "description": {
+    "short": "The Smart Trichter is a battery-powered party device that measures drinking speed with a flow sensor and shows the results on a screen so players can compare them in non-alcoholic drinking competitions."
+  },
+  "stats": {
+    "weight": "---",
+    "cost": "---",
+    "found-component": "---",
+    "microcontroller": "Arduino UNO",
+    "keywords": [
+      "Interaction",
+      "Playfulness",
+      "DIY",
+      "Engineering",
+      "Experimentation"
+    ]
+  }
+}

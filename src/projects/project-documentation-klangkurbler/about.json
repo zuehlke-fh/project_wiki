@@ -1,0 +1,19 @@
+{
+  "title": "Klangkurbel",
+  "description": {
+    "short": "Klangkurbel is a digital hurdy-gurdy. Turn its crank to play mp3 files."
+  },
+  "stats": {
+    "weight": "0.7 kg",
+    "cost": "~50 EUR",
+    "found-component": "Wooden box, hand crank flashlight, old pc speakers",
+    "microcontroller": "ESP32 Feather",
+    "keywords": [
+      "Upcycling",
+      "Mechanical",
+      "Human-power",
+      "Playfulness",
+      "Satire"
+    ]
+  }
+}

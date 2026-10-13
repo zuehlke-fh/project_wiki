@@ -44,7 +44,7 @@ function prettifyId(id: string): string {
     .join(' ')
 }
 
-const imageFiles = import.meta.glob('../projects/**/{images,Images}/*.{png,jpg,jpeg,gif,webp,svg}', {
+const imageFiles = import.meta.glob('../projects/**/{images,Images}/*.{png,jpg,jpeg,gif,webp,svg,PNG,JPG,JPEG,GIF,WEBP,SVG}', {
   eager: true,
   import: 'default',
 }) as Record<string, string>

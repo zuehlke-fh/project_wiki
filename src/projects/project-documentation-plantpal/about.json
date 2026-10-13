@@ -1,0 +1,20 @@
+{
+  "title": "PlantPal",
+  "description": {
+    "short": "PlantPal is an automated plant irrigation system that monitors soil moisture with sensors and waters the plants as required, suitable for households and urban gardening projects such as vertical farming."
+  },
+  "stats": {
+    "weight": "---",
+    "cost": "65 EUR",
+    "found-component": "Generator",
+    "microcontroller": "ESP32 Feather",
+    "keywords": [
+      "Found Treasures",
+      "Sustainability",
+      "Innovation",
+      "Engineering",
+      "Eco-friendly",
+      "Functionality"
+    ]
+  }
+}

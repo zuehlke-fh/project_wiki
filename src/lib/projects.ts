@@ -14,6 +14,7 @@ export interface ProjectAbout {
   stats?: ProjectAboutStats
   image?: string
   title?: string
+  year?: string
   [key: string]: unknown
 }
 
@@ -21,6 +22,7 @@ export interface Project {
   id: string
   title: string
   rootPath: string
+  year?: string
   about?: ProjectAbout
   heroImage?: string
 }
@@ -75,6 +77,7 @@ export const projects: Project[] = projectIds.map(id => {
     id,
     title,
     rootPath,
+    year: aboutEntry?.year,
     about: aboutEntry,
     heroImage,
   }
